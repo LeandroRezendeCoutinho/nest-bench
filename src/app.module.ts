@@ -9,7 +9,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     ContactsModule,
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      database: 'db',
+      database: 'bench.db',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
