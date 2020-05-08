@@ -14,6 +14,10 @@ export class ContactsService {
     return await this.contactRepository.find();
   }
 
+  async findById(id: number): Promise<Contact> {
+    return await this.contactRepository.findOne(id);
+  }
+
   async create(contact: Contact): Promise<Contact> {
     return await this.contactRepository.save(contact);
   }

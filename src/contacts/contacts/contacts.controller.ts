@@ -20,6 +20,11 @@ export class ContactsController {
     return this.contactsService.findAll();
   }
 
+  @Get('/:id')
+  async findById(@Param('id') id: number): Promise<Contact> {
+    return this.contactsService.findById(id);
+  }
+
   @Post('create')
   async create(@Body() contactData: Contact): Promise<any> {
     return this.contactsService.create(contactData);
